@@ -1,5 +1,6 @@
 import React from 'react';
 import { TrendingUp, Shield, Battery, MapPin } from 'lucide-react';
+import { Globe } from '../ui/globe';
 
 interface NetworkItem {
   icon: typeof TrendingUp;
@@ -65,19 +66,9 @@ export function NetworkSection({ isVisible }: NetworkSectionProps) {
               </div>
             ))}
           </div>
-          <div
-            className={`h-96 bg-gradient-to-br from-primary/12 to-transparent rounded-2xl border border-primary/20 flex items-center justify-center transition-all duration-1000 hover:shadow-lg ${
-              isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
-            }`}>
-            <div className="text-center space-y-6">
-              <div className="relative w-32 h-32 mx-auto">
-                <MapPin className="w-20 h-20 text-primary/40 absolute inset-0" />
-                <div className="absolute inset-0 animate-ping opacity-50">
-                  <MapPin className="w-20 h-20 text-primary/20" />
-                </div>
-              </div>
-              <p className="text-foreground/60 font-medium">Coverage expanding</p>
-            </div>
+
+          <div className="relative flex h-full min-h-80 items-center justify-center md:min-h-full">
+            <Globe />
           </div>
         </div>
       </div>

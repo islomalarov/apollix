@@ -35,7 +35,7 @@ export default function Home() {
       <HeroSection isVisible={isVisible} onScroll={handleScroll} />
       <ServicesSection />
       <StatsSection />
-      <NetworkSection isVisible={isVisible} />
+      <NetworkSection />
       <CTASection onScroll={handleScroll} />
       <ContactSection />
       <Footer />

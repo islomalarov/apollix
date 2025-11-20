@@ -1,6 +1,5 @@
-import React from 'react';
-import { TrendingUp, Shield, Battery, MapPin } from 'lucide-react';
-import { Globe } from '../ui/globe';
+import { TrendingUp, Shield, Battery } from 'lucide-react';
+import { Globe } from '@/components/ui/globe';
 
 interface NetworkItem {
   icon: typeof TrendingUp;
@@ -30,11 +29,7 @@ const NETWORK_FEATURES: NetworkItem[] = [
   },
 ];
 
-interface NetworkSectionProps {
-  isVisible: boolean;
-}
-
-export function NetworkSection({ isVisible }: NetworkSectionProps) {
+export function NetworkSection() {
   return (
     <section id="network" className="py-32 px-4 relative">
       <div className="max-w-7xl mx-auto space-y-20">
@@ -56,7 +51,7 @@ export function NetworkSection({ isVisible }: NetworkSectionProps) {
                 key={idx}
                 className="flex gap-5 animate-slide-up transition-all group p-4 rounded-xl hover:bg-foreground/5 transition-premium"
                 style={{ animationDelay: item.delay }}>
-                <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center transition-premium group-hover:bg-primary/20 group-hover:scale-110">
+                <div className="shrink-0 w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center transition-premium group-hover:bg-primary/20 group-hover:scale-110">
                   <item.icon className="w-7 h-7 text-primary" />
                 </div>
                 <div>

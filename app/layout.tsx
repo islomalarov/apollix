@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import { Geist } from 'next/font/google';
+import { TestBanner } from '@/components/ui/test-banner';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geist.className}>
       <body className={`font-sans antialiased`}>
+        <TestBanner />
         {children}
         <Analytics />
       </body>

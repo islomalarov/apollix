@@ -1,4 +1,3 @@
-import React from 'react';
 import { Zap, MapPin, Shield, ArrowRight, LucideIcon } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
@@ -37,7 +36,7 @@ const SERVICES: ServiceItem[] = [
 export function ServicesSection() {
   return (
     <section id="services" className="py-32 px-4 bg-secondary/30 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/3 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/3 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10 space-y-20">
         <div className="text-center space-y-6 animate-slide-up">
           <p className="text-primary font-semibold text-sm tracking-widest">OUR CAPABILITIES</p>
@@ -53,7 +52,7 @@ export function ServicesSection() {
           {SERVICES.map((service, idx) => (
             <div key={idx} className="animate-slide-up" style={{ animationDelay: service.delay }}>
               <Card
-                className={`p-8 border border-border/60 bg-gradient-to-br ${service.color} hover:border-primary/50 transition-premium hover:shadow-xl hover:scale-105 group cursor-pointer h-full backdrop-blur-sm`}>
+                className={`p-8 border border-border/60 bg-linear-to-br ${service.color} hover:border-primary/50 transition-premium hover:shadow-xl hover:scale-105 group cursor-pointer h-full backdrop-blur-sm`}>
                 <div className="transition-premium group-hover:scale-125 group-hover:text-primary w-fit mb-6">
                   <service.icon className="w-14 h-14 text-primary" />
                 </div>

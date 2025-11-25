@@ -32,7 +32,7 @@ export function StatsSection() {
               className="space-y-3 animate-scale-in"
               style={{ animationDelay: `${idx * 0.12}s` }}>
               <p className="text-5xl md:text-6xl font-black text-primary-foreground tracking-tight">
-                <NumberTicker value={stat.number} className="text-primary-foreground" />
+                {/* <NumberTicker value={stat.number} className="text-primary-foreground" /> */}
                 {stat.unit}
               </p>
               <p className="text-primary-foreground/80 font-semibold text-sm tracking-wide">

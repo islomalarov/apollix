@@ -1,7 +1,7 @@
-"use client";
-import React, { SVGProps, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { cn } from "@/lib/utils";
+'use client';
+import React, { SVGProps, useState } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 export const StickyBanner = ({
   className,
@@ -15,7 +15,7 @@ export const StickyBanner = ({
   const [open, setOpen] = useState(true);
   const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, 'change', (latest) => {
     console.log(latest);
     if (hideOnScroll && latest > 40) {
       setOpen(false);
@@ -27,7 +27,7 @@ export const StickyBanner = ({
   return (
     <motion.div
       className={cn(
-        "sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center bg-transparent px-4 py-1",
+        'sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center bg-transparent px-4 py-1',
         className,
       )}
       initial={{
@@ -40,9 +40,8 @@ export const StickyBanner = ({
       }}
       transition={{
         duration: 0.3,
-        ease: "easeInOut",
-      }}
-    >
+        ease: 'easeInOut',
+      }}>
       {children}
 
       <motion.button
@@ -53,8 +52,7 @@ export const StickyBanner = ({
           scale: 1,
         }}
         className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer"
-        onClick={() => setOpen(!open)}
-      >
+        onClick={() => setOpen(!open)}>
         <CloseIcon className="h-5 w-5 text-white" />
       </motion.button>
     </motion.div>
@@ -73,8 +71,7 @@ const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}
-    >
+      {...props}>
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />
       <path d="M6 6l12 12" />

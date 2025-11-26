@@ -77,13 +77,13 @@ export function ContactSection() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hello@apollix.uz',
+      value: 'info@qie.uz',
       delay: '0s',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+998 (71) 200-00-00',
+      value: '+998 (99) 857-88-89',
       delay: '0.1s',
     },
     {
@@ -95,7 +95,7 @@ export function ContactSection() {
   ];
   return (
     <section id="contact" className="py-32 px-4 bg-secondary/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10 space-y-20">
         <div className="text-center space-y-6 animate-slide-up">
